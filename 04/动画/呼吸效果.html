@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 50px auto;
+            box-shadow: 0 1px 5px rgba(68, 99, 102, 0.2);
+            border-radius: 50%;
+            animation: breathe 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes breathe{
+            0% {
+                opacity: 0.2;
+                box-shadow: 10px 20px 2px rgba(80, 15, 88, 0.1);
+            }
+
+            50% {
+                opacity: 0.5;
+                box-shadow: 10px 20px 2px rgba(18, 190, 84, 0.7);
+            }
+
+            100% {
+                opacity: 1;
+                box-shadow: 10px 20px 2px rgba(80, 15, 88, 1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

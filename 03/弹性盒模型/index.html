@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- display:flex开启弹性盒，默认横向摆放  column 纵向排列；column-reverse反转纵向排列，row默认-->
+    <!-- justify-content:flex-start/flex-end/center,居左/居右/居中 -->
+    <!-- align-items以上 居左/居右/居中-->
+    <!-- disply父元素 -->
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: #555;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        /* 设置flex之后，width宽度就不再生效了，flex称为权重 */
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            flex: 1;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+
+    </div>
+</body>
+
+</html>

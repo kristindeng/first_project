@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            float: left;
+        }
+        .container{
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+        }
+        img{
+            width: 300px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- 解决文档流问题：使用脱离文档流（浮动、绝对定位、固定定位） --> 
+    <!-- 浮动:增加一个浮层来放置内容；float属性定义元素在那个方向浮动，任何元素都可以浮动；向左feft向右right-->
+    <!-- 浮动只有左右没有上下 -->
+    <div class="box"></div>
+    <div class="container"></div>
+
+    <div>
+        <img src="2.jpg" alt="">
+        <img src="2.jpg" alt="">
+    </div>
+</body>
+</html>

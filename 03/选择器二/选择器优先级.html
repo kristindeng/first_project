@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 同级别同时运行，自上而下，但是后面的会把前面的覆盖掉 -->
+    <style>
+        .t1{
+            color: red;
+        }
+        .t2{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h3>全局选择器：*</h3>
+    <h3>元素选择器：标签名称</h3>
+    <h3>类选择器：class属性名（.)</h3>
+    <h3>id选择器：id属性名（#）</h3>
+    <p>行内样式1000>id样式100>类选择器10>元素选择器1</p>
+
+    <p style="font-size: 15px; color:red" class="text" id="desc">我是p标签</p>
+    <p class="t1 t2">测试文本</p>
+</body>
+</html>

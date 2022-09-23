@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<!-- 执行动画：name动画名称； duration动画持续时间； timing-function动画效果的速度； delay动画开始时间 -->
+<!-- iteration-count动画循环的次数，infinite为无限次数的循环,也可以写2，代表循环2次；  direction播放的方向；  
+    animation-play-state控制动画的播放状态：runing代表播放，paused停止 -->
+    <!-- ease逐渐变慢， linear匀速，  ease-in加速-out减速，  ease-in-out先加速后减速 -->
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            animation: lanlan 3s linear 0s infinite;
+        }
+
+        /*  animation-play-state: paused鼠标移上去就暂停*/
+        div:hover{
+           animation-play-state: paused;
+        }
+        @keyframes lanlan{
+            0%{
+                width: 200px;
+                background-color: red;
+            }
+            50%{
+                width: 400px;
+                background-color: aqua;
+            }
+            100%{
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

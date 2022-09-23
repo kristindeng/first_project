@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 标签之表格 -->
+    <table>
+        <tr>
+            <td>兰兰</td>
+            <td>兰兰</td>
+            <td>兰兰</td>
+        </tr>
+        <tr>
+            <td>兰兰</td>
+            <td>兰兰</td>
+            <td>兰兰</td>
+        </tr>
+        <tr>
+            <td>兰兰</td>
+            <td>兰兰</td>
+            <td>兰兰</td>
+        </tr>
+    </table>
+    <!-- 快捷键 table>tr*2>td{兰兰} --> 三行四列 加表格线 tr(行) td(单元格--兰兰)
+    <table border="1" width="400px" height="200px">
+        <tr>
+            <td>兰兰</td>
+            <td>兰兰</td>
+            <td>兰兰</td>
+        </tr>
+        <tr>
+            <td>兰兰</td>
+            <td>兰兰</td>
+            <td>兰兰</td>
+        </tr>
+        <tr>
+            <td>兰兰</td>
+            <td>兰兰</td>
+            <td>兰兰</td>
+        </tr>
+        <tr>
+            <td>兰兰</td>
+            <td>兰兰</td>
+            <td>兰兰</td>
+        </tr>
+    </table>
+
+    <!-- 表格单元格合并 -->
+    <p>合并单元格6和7:colspan</p>
+    <p>合并单元格15和20:rowspan</p>
+    <p>合并16、17、21、22</p>
+    <p>水平合并:保留左边,删除右边</p>
+    <p>垂直合并:保留上边,删除下边</p>
+    <table border="1" width="600px" height="200px">
+        <tr>
+            <td>兰兰1</td>
+            <td>兰兰2</td>
+            <td>兰兰3</td>
+            <td>兰兰4</td>
+            <td>兰兰5</td>
+        </tr>
+        <tr>
+            <td colspan="2">兰兰6和7</td>
+            <td>兰兰8</td>
+            <td>兰兰9</td>
+            <td>兰兰10</td>
+        </tr>
+        <tr>
+            <td>兰兰11</td>
+            <td>兰兰12</td>
+            <td>兰兰13</td>
+            <td>兰兰14</td>
+            <td rowspan="2">兰兰15</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2">兰兰16和17、21、22</td>
+            <td>兰兰18</td>
+            <td>兰兰19</td>
+            <td>兰兰20</td>
+        </tr>
+        <tr>
+            <td>兰兰23</td>
+            <td>兰兰24</td>
+            <td>兰兰25</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

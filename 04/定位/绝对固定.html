@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 每设置一个绝对定位就是一层；绝对定位会脱离文档流，图片会压盖 -->
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            position: absolute;
+            left: 100px;
+            top: 200px;
+        }
+        .box2{
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

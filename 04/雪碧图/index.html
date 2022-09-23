@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 优点：减少图片的字节，减少网页的http请求，提高页面性能 -->
+    <!-- 原理：通过backgroud-image引入背景图片； 通过background-position把背景图片移动到自己需要的位置 -->
+
+    <style>
+        .icon1{
+            width: 145px;
+            height: 145px;
+            display: block;
+            background-image: url(emoji.jpeg);
+            border: 1px solid red;
+            background-position: -132px -232px;
+        }
+        .icon2{
+            width: 145px;
+            height: 145px;
+            display: block;
+            background-image: url(emoji.jpeg);
+            border: 1px solid red;
+            background-position: -614px -613px;
+        }
+    </style>
+</head>
+<body>
+    <span class="icon1"></span>
+    <span class="icon2"></span>
+</body>
+</html>
