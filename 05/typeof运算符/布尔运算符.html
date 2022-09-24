@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  var flag = false;
+  console.log(!flag);//ture
+
+  //以下六个值取反后为ture，其他值均为false
+  console.log(!undefined);
+  console.log(!null);
+  console.log(!false);
+  console.log(!0);
+  console.log(!NaN);
+  console.log(!"");
+
+  //且运算符(&&)多个条件都要满足,只要有一个条件不满足，都是false
+  console.log(10 < 20 && 10 > 5);//true
+  console.log(10 > 20 && 10 > 5);//false
+  console.log(10 > 20 && "10" > 5 && 10 > "5" && 10 === 5 && 10 === "5");//false
+
+  //或运算符(||)满足一个条件即可,只有全部条件不满足才为false
+  console.log(10 < 20 || 10 > 5);//true
+  console.log(10 > 20 || 10 > 5);//true
+  console.log(10 > 20 || 10 < 5);//false
+  console.log("10" > 5 );//true
+  console.log(10 > 20 || "10" > 5 || 10 > "5" || 10 === 5 || 10 === "5");//true
+</script>
+</body>
+</html>

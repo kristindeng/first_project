@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //输出1-100数字之间和
+  // var sum = 0;
+  // for(var i = 1;i<=100;i++){
+  //   sum += i;//sum=sum+i
+  // }
+  // console.log(sum);
+
+  //循环输出1000以内的奇数，不能被2整除的是奇数
+  // for (var i = 0; i<=1000;i++){
+  //   if (i % 2 !==0){
+  //     console.log(i)
+  //   }
+  // }
+
+  //打印九九乘法表
+  //字符串和数字相加：会显示一个字符串的格式："i=" + i => i=3
+  // var sum = 0;
+  // for (var i =1; i<=9;i++){
+  //   for (var j = 1; j <= i; j++) {
+  //     sum= i*j
+  //     document.write(i + "x" + j+ "="+sum +" ")
+  //   }
+  //   document.write("<br>")
+  // }
+  var sum = 0;
+  for (var i =9; i>0;i--){
+    for (var j = 9; j >= i; j--) {
+      sum= i*j
+      document.write(i + "x" + j+ "="+sum +" ")
+    }
+    document.write("<br>")
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var flag = false;
+    if (flag) {
+        //flag为true则执行大括号里面的语句
+        //flag为false则不执行大括号里面的语句
+        console.log("我是真的");
+    } else {
+        console.log("我是假的");
+    }
+    // 我想输入一个年龄，帮我判断出来他现在是哪个年龄段的，0-3岁幼儿，4-7小孩，8-12少儿，13-17青少年，18岁以上成年；
+    var age = 2;
+    if (0 <= age <=3) {
+        console.log("幼儿");
+    } else if (4 <= age <=7){
+        console.log("小孩")
+    } else if (8 <= age <=12){
+        console.log("少儿");
+    } else if (13 <= age <=17){
+        console.log("青少年")
+    } else{
+        console.log("成年")
+    }
+
+
+    //0-6:一周的七天
+    //判断一下今天周几
+    var day = 6;
+    if (day === 0) {
+        console.log("今天是周一")
+    } else if (day === 1) {
+        console.log("今天是周二")
+    } else if (day === 2) {
+        console.log("今天是周三")
+    } else if (day === 3) {
+        console.log("今天是周四")
+    } else if (day === 4) {
+        console.log("今天是周五")
+    } else if (day === 5) {
+        console.log("今天是周六")
+    } else if (day === 6) {
+        console.log("今天是周日")
+    } else {
+        console.log("请输入数字0-6")
+    }
+</script>
+</body>
+</html>
