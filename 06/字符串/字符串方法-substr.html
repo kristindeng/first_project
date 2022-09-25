@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //这是substring
+  var name = "zifuchuan";
+  var result = name .substring(2,9);
+  console.log(result);
+
+  //substr跟substring方法的作用相同
+  //substr方法的第一个参数是子字符串的开始位置（从0开始计算），第二个参数是子字符串的长度
+  var name = "zifuchuan";
+  var result1 = name.substr(2,7)
+  console.log(result1);
+
+  //如果省略第二个参数，则表示子字符串一直到原字符串的结束
+  var result3 = name .substr(2);
+  console.log(result3);
+
+  //正数从零开始，负数从-1开始
+  var result4 = "my name is denglan";
+  console.log(result4.substr(-5))
+  console.log(result4.substr(2,0));//""
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  //trim方法用于去除字符串两端的空格，返回一个新字符串，不改变原字符串
+  var name = "  lanlan  ";
+  var result = name.trim()
+  console.log(result);
+  //trimStart去除首部空格
+  console.log(name.trimStart());
+  //trimEnd去除尾部空格
+  console.log(name.trimEnd());
+
+  //可以清除制表符\t和换行符\n和回车符\r
+  var name2 = "\r\nlanlan\t";
+  console.log(name2.trim());
+
+  //字符串中间的空格不能去除
+  var name3 = "lan lan"
+  console.log(name3.trim())
+
+</script>
+</body>
+</html>

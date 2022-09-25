@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //数组（array）是按次序排列的一组值。每个值的位置都有编号（从0开始），整个数组用方括号表示。
+    //两端的方括号是数值的标志。sxt是0号位置，baizhan是1号位置，it是2号位置
+    // 下标：指的是数据在对象中的位置;
+    // 声名空数组/创建空数组/定义空数组/初始化空数组
+    var array = ['stx','baizhan','it'];
+    //这是初始化的array长度
+    console.log(array.length);
+    console.log(array);
+    array[3] = "lanlan";
+    //下标可以赋值、读取
+    console.log(array[3])
+
+    //没有类型限制，还可以放数组
+    array[4] = 12
+
+    //多层数组，套一层就是二维数组，数组的维度没有限制
+    array[5] = ["lanlan",13,true]
+    console.log(array)
+    // TODO 没有括号叫属性，有括号叫方法
+    //array自上而下代码执行变化后的长度
+    console.log(array.length);
+    //数组总长度为6，现在取下标为11，会出现数组下标越界的异常，输出结果为undefined
+    console.log(array[11])
+
+    console.log(array.reverse())
+
+</script>
+</body>
+</html>

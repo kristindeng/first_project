@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  //typeof专门判断数据类型，但是判断不了数组，数组返回object，map也返回object，所以无法判断数组和map对象
+  var str = "字符串"
+  var num = 123
+  var flag = false
+  var array = []
+  var obj = {}
+  console.log(typeof str)
+  console.log(typeof num)
+  console.log(typeof flag)
+  console.log(typeof array)
+  console.log(typeof obj)
+  // Array.isArray(array)，判断是否为数组，返回值为bool
+  console.log(Array.isArray(obj))
+
+</script>
+</body>
+</html>

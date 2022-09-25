@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  //字符串就是零个或多个排在一起的字符，放在单引号或双引号之中
+  //单引号字符串内部，可以使用双引号。双引号字符串的内部，可以使用但引号
+
+  var str1 = "字符串,'字符串1'"
+  var str2 = '学习第六天,"字符串2"'
+
+  //不能双引号中嵌套双引号，或者单引号中嵌套单引号;  输出一个带双引号的文本\
+  var str3= "字符串,\"字符串2\""
+  console.log(str3);
+
+  //字符串默认只能一行显示，如果要换行，需要转义
+  var str4 ="不能双引号中嵌套双引号,\
+  或者单引号\
+  中嵌套单引号"
+  console.log(str4)
+
+  //length属性返回字符串的长度，该属性也是无法改变的
+  var str5 = "大家好，我是lanlan"
+  console.log(str5.length);
+
+
+</script>
+</body>
+</html>

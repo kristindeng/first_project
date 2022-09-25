@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  //非常重要:indexOf方法用于确定一个字符串在另一个字符串中第一次出现的位置，如果返回-1，就表示不匹配,如果匹配则返回字符串中第一次出现的位置下标
+  var hello = "h,elloworld"
+  //判断上述字符串中是否存在e这个词汇
+  console.log(hello.indexOf("e"));
+
+
+  var hello1 = "我爱祖国，我爱父母，我爱家乡"
+  //第二个参数表示从下标位置起匹配字符串第一次出现的位置下标
+  console.log(hello1.indexOf("我爱", 6));
+
+
+</script>
+</body>
+</html>

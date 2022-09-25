@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  //split方法按照给定规则分割字符串，返回一个由分割出来的子字符串组成的数组
+  var name = "白日依山尽，黄河入海流，欲穷千里目，更上一层楼";
+  console.log(name.split("，"))
+  //把逗号替换成句号
+  console.log(name.replaceAll("，", "。"))
+
+  // 如果是空字符串会直接分割每一个字符
+  var name1 = "白日依山尽";
+  console.log(name1.split(""))
+
+  //如果省略参数，则返回原字符串
+  var name2 = "白日依山尽";
+  console.log(name2.split())
+
+  //split方法还可以接受第二个参数，限定返回数组的最大成员数
+  var name3 = "白日依山尽";
+  console.log(name3.split("",4))//白日依山
+</script>
+</body>
+</html>
