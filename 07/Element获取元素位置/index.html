@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .box{
+          width: 200px;
+          height: 200px;
+          border: 5px solid red;
+          padding: 10px;
+          margin: 20px;
+          background-color: #0077aa;
+      }
+      h3{
+          height: 500px;
+      }
+    </style>
+</head>
+<body>
+     <div class="box" id = "box"></div>
+<h3>标题1</h3>
+<h3>标题2</h3>
+<h3>标题3</h3>
+<h3>标题4</h3>
+
+<script>
+    var box = document.getElementById("box")
+    console.log(box.clientWidth);
+    console.log(box.clientHeight);
+
+    //document.documentElement的clientHeight的属性，返回当前视口的高度（即浏览器窗口的高度）。
+    //document.body的高度则是网页的实际高度
+    console.log(document.documentElement.clientHeight);
+    console.log(document.body.clientHeight);
+
+    //与上面clientHeight、document.body可以互换使用
+    // console.log("----------")
+    // console.log(box.scrollWidth);
+    // console.log(box.scrollHeight);
+    // console.log(document.documentElement.scrollHeight);
+    // console.log(document.body.scrollHeight);
+
+
+    //获取滚动高度 scrollTop上下滚动，scrollleft左右滚动
+    console.log("----------")
+    console.log(document.documentElement.scrollTop);
+
+    //offsetHeight元素的CSS垂直高度（单位像素），包括元素本身的高度、padding和border
+    //offsetWidth元素的CSS水平宽度（单位像素），包括元素本身的高度、padding和border
+    console.log("----------")
+    console.log(box.offsetWidth);
+    console.log(box.offsetHeight);
+
+
+</script>
+</body>
+</html>

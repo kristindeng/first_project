@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //函数就是方法，方法就是函数
+    //函数是一段可以反复调用的代码块
+    //function命令：func命令声明的代码区块，就是一个函数。func命令后面是函数名，函数名后面是一对圆括号，里面是传入函数的参数。
+    // 函数体放在大括号里面。
+    //可以反复调用
+    // function add(){
+    //     console.log("结果"); //函数体
+    // }
+    // add();
+    // add();
+    // add();
+
+
+    //函数名的提升：js引擎将函数名是为同变量名，所以采用function命令声明函数时，整个函数就会像变量声明一样，被提升到代码头部
+    //可以先调用，后创建
+    // add();
+    // add();
+    // add();
+    // function add(){
+    //     x = 10;
+    //     y = 20;
+    //     console.log(x+y);
+    // }
+
+
+    //函数参数:函数运行的时候，有时需要提供外部数据，不同的外部数据会得到不同的结果，这种外部数据就叫参数
+    function add(x,y){
+        console.log(x+y);
+    }
+    add(10,20);
+    add(45,20);
+    add(12,34);
+
+    //函数返回值：js函数提供两个接口实现与外界的交互，其中参数作为入口，接收外界信息；返回值作为出口，把运算结果反馈给外界
+    //return:接收函数运行的结果；return后面不能添加任何的代码，因为不会执行
+    function add(x,y){
+        return x + y;
+    }
+    var result = add(10,20);
+    console.log(result);
+</script>
+</body>
+</html>

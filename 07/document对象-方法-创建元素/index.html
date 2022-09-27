@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="nav">导航</div>
+<div id="container"></div>
+
+<script>
+
+  //document.createElement()方法用来生成元素节点，并返回该节点
+  // var text = document.createElement("p");
+  // console.log(text);
+
+  //document.createTextNode()方法生成文本节点（Text实例），并返回该节点。它的参数是文本节点的内容
+  var text = document.createElement("p");
+  var content = document.createTextNode("我是文本");
+  //appendChild:将内容或者子元素放到容器中
+  text.appendChild(content);
+  console.log(text);//<p>我是文本<p>
+
+  //document.createAttribute()方法生成一个新的属性节点（Atr实例），并返回它
+  //属性的添加用createAttribute
+  var id = document.createAttribute("id");
+  id.value = "root";
+  text.setAttributeNode(id);
+  console.log(text);//<p id = "root">我是文本<p>
+
+  //输出到页面中
+  //标签和文本关系的放入都是通过它
+  var container = document.getElementById("container");
+  container.appendChild(text);
+
+</script>
+</body>
+</html>

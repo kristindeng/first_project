@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>hello1</div>
+<div>hello2</div>
+<p class="text">hello</p>
+<form name="lanlan"></form>
+<div id="root">哈哈</div>
+<div class="nav">nav1</div>
+<div class="nav">nav2</div>
+<script>
+    //document.getElementsByTagName()方法搜索HTML标签名，返回符合标签的元素。它的返回值是一个类似数组对象（HTML实例），可以实时反映HTML
+    //文档的变化。如果没有任何匹配的元素，就返回一个空集
+    var div1 = document.getElementsByTagName("div")[0]
+    console.log(div1)//hello
+    div1.innerHTML = "hello world"//修改内容
+
+    //document.getElementsByClassName()返回一个类似数组的对象（HTML Collection实例）包括了所有class名字符合指定条件的元素，
+    //元素变化实时反映在返回结果中
+    var text = document.getElementsByClassName("text")[0]
+    console.log(text);
+    text.innerHTML = "hello!"//改变内容，原本hello变成hello!
+
+    //document.getElementsByByName()方法用于选择拥有name属性的HTML元素（比如<form>、<radio>、<img>等，
+    //返回一个类似数组的对象（Nodelist实例），因为name属性相同的元素可能不止一个
+    //这个使用率极低
+    var name = document.getElementsByName("lanlan")
+    console.log(name);
+
+    //document.getElementByLd()方法返回匹配指定id属性的元素节点。如果没有发现匹配的节点，则返回null
+    //id是唯一的；这个方法最常用
+    var root = document.getElementById("root");
+    console.log(root);
+    root.innerHTML = "呵呵"//改变内容
+
+    //document.querySelector()方法接受一个CSS选择器作为参数，返回匹配该选择器的元素节点。
+    // 如果多个节点满足匹配条件，则返回第一个匹配的节点。如果没有发现匹配的节点，则返回null
+    var nav = document.querySelector(".nav");
+    console.log(nav);
+    nav.innerHTML= "nav!"//改变内容
+
+    //document.querySelectorAll()方法与querySelector用法类似，区别是返回一个Nodelist对象，包含所有匹配给定选择器的节点
+    var navs= document.querySelectorAll(".nav")[1];//[1]就是第二个，是从零开始的
+    console.log(navs);
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+     *{
+         padding: 0;
+         margin: 0;//去除浏览器自带的8像素
+     }
+     .root{
+         width: 500px;
+         height: 500px;
+         background-color: #999;
+         margin: 50px;
+         position: relative;//父级有定位相对于父级，父级没有定位一直往上找
+     }
+     .box{
+         width: 200px;
+         height: 200px;
+         background-color: red;
+         margin: 100px;
+     }
+    </style>
+</head>
+<body>
+   <div class = "root">
+       <div class="box" id="box"></div>
+   </div>
+<script>
+    //offsetleft到定位父级左边界的间距
+    //offsettop到定位父级上边界的间距
+    var box = document.getElementById("box")
+    console.log(box.offsetLeft)
+    console.log(box.offsetTop)
+</script>
+</body>
+</html>

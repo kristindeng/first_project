@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //对象：是js语言的核心概念，也是最重要的数据类型，简单说，对象就是一组“键值对”（key-walue）的集合，是一种无序的复合数据集合
+    //创建一个对象user
+    //  var user = {
+    //   name:"lanlan";
+    //   age: 18;
+    //  }
+
+    //对象的每一个键名又称为“属性”（property），它的“键值”可以是任何数据类型。如果一个属性的值为函数，
+    // 通常把这个属性称为“方法”，它可以像函数那样调用
+    var user = {
+        name: "lanlan",
+        age: 18,
+        jobs: ["work", "teacher"],
+        flag: true,
+        getName: function () {
+            console.log("iwen")
+        },
+        container: {
+            frontEnd: "web前端",
+            backEnd: ["python", "java"]
+        }
+    }
+    //对象的读取方式：对象名，属性
+    console.log(user.name);
+    console.log(user.jobs);//["work","teacher"]
+
+    for (var i = 0; i < user.jobs.length; i++) {
+        console.log(user.jobs[i])
+    }
+    user.getName();
+
+    //链式调用
+    console.log(user.container.frontEnd);
+    console.log(user.container.backEnd);
+</script>
+</body>
+</html>

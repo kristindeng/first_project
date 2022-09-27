@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="box" id="box"></div>
+<script>
+    //  //HTML元素的style属性
+    //操作CSS样式最简单的方法，就是使用网页元素节点的setAttribute方法直接操作网页元素的style属性
+    var box = document.getElementById("box")
+    // box.setAttribute("style","width:200px;height:200px;background:red;")
+
+    //元素节点的style属性(这个比较常用，更清晰）
+    box.style.width = "300px";
+    box.style.height = "300px";
+    box.style.backgroundColor = "red";
+
+    //cssText属性
+    box.style.cssText = "width:200px;height:200px;background:red;"
+</script>
+</body>
+</html>

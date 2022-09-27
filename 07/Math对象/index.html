@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //Math是javaScrip的原生对象，提供各种数学功能
+    let number1 = Math.abs(-1);
+    console.log(number1);
+
+    //Math.max()最大值,Math.min()最小值。如果参数为空，Math.min返回Infinity Math.max返回-Infinity
+    var number2 = Math.max(2, -1, 5);
+    console.log(number2);
+    var number3 = Math.min(2, -1, 5);
+    console.log(number3);
+    var number4 = Math.min();
+    console.log(number4);
+    var number5 = Math.max();
+    console.log(number5);
+
+    //Math.floor()向下取整，Math.ceil()向上取整
+    var number = Math.floor(4.5);//不管小数点是几都舍去
+    console.log(number);
+    var number6 = Math.ceil(8.1);//不管小数点是几都进1
+    console.log(number6);
+
+    //Math.random()返回0到1之间的一个伪随机数，可能等于0，但是一定小于1
+    var random = Math.random();
+    console.log(random)
+
+    // 求两个整数之间的整数
+    function getRandomArbitrary(min, max) {
+        var newVar = Math.random() * (max - min) + min;
+        let floor = Math.floor(newVar);
+        console.log(floor)
+    }
+
+    getRandomArbitrary(5, 10);
+</script>
+</body>
+</html>
