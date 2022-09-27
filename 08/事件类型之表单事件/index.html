@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="username">
+<input type="text" id="password">
+<script>
+
+    //表单事件是在使用表单元素及输入框元素可以监听的一系列事件
+    //input事件/select事件/Change事件/reset事件/submit事件
+    var username = document.getElementById("username");
+    username.oninput = function (e) {
+        console.log(e.target.value);//读取数据，内容发生改变，可以实时读取数据
+    }
+
+    //select事件：选中文本时触发
+    username.onselect = function () {
+        console.log("选中了")
+    }
+
+    //Change事件：它与input事件的最大不同，就是不会连续触发，只有当全部修改完成时才会触发
+    //失去焦点和回车时触发
+    var password = document.getElementById("password")
+    password.onchange= function (e){
+        console.log(e.target.value);
+    }
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+//点击所有li标签生效
+<ul id="list">
+    <li>列表1</li>
+    <li>列表2</li>
+</ul>
+<script>
+    //父元素系统处理子元素事件
+    //点击子元素会触发父元素
+    var list = document.getElementById("list")
+    // list.onclick = function (){
+    //   console.log("点击了")
+    // }
+
+    //给每一个li标签添加事件  toLowerCase转换成小写
+    console.log("点击了li标签")
+    list.addEventListener("click", function (e) {
+        if (event.target.tagName.toLowerCase() === "li") ;
+        console.log("点击了li标签")
+
+        //获取点击的li标签里的内容
+        console.log(event.target.innerHTML);
+    })
+
+</script>
+</body>
+</html>

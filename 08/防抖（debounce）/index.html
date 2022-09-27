@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h3 {
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+<h3>哈哈</h3>
+<h3>哈哈</h3>
+<h3>哈哈</h3>
+<h3>哈哈</h3>
+<h3>哈哈</h3>
+<h3>哈哈</h3>
+<script>
+    //防抖的定义：对于短时间内连续触发的事件（滚动事件），防抖的含义就是让某个时间期限（如1000毫秒内），事件处理函数只执行一次
+    //防抖性能优化知识，遇到频率相当高，处理不当或者放任不管就容易引起浏览器卡死
+    //滚动事件
+    // window.onscroll = function () {
+    //     console.log("页面滚动了")
+    // }
+
+
+   // 需求：打印滚动页面高度
+   //  window.onscroll = scrollHandle
+   //  function scrollHandle(){
+   //      var scrollTop = document.documentElement.scrollTop
+   //      console.log(scrollTop);
+   //  }
+
+    //存在的问题：函数的默认执行频率太高了，优化如下
+    //解决思路：在第一次触发事件时，不立即执行函数，而是给出一个期限值比如200ms，然后
+    //01:如果在200ms内没有再次触发滚动事件，那么就立即执行函数
+    //02:如果在200ms内再次触发滚动事件，那么当前的计时取消，重新开始计时
+    //效果：如果短时间内大量触发同一事件，只会执行一次函数
+    //实现：关键在于setTimeout这个函数，由于还需要一个变量来保存计时，考虑维护全局纯净，可以借助闭包来实现
+    function debounce(fn,delay){
+        var timer = null;
+        return function (){
+            if(timer){
+                clearTimeout(timer)
+            }
+            timer = setTimeout(fn,delay)
+        }
+    }
+    window.onscroll = debounce(scrollHandle,200)
+    function scrollHandle(){
+        var scrollTop = document.documentElement.scrollTop;
+        console.log(scrollTop);
+    }
+
+</script>
+</body>
+</html>

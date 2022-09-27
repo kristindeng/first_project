@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    h3{
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+<h3>标题1</h3>
+<h3>标题1</h3>
+<h3>标题1</h3>
+<h3>标题1</h3>
+<h3>标题1</h3>
+<h3>标题1</h3>
+<script>
+  //节流,与防抖不同的是，一直按着不松一直动，2s后也会打印，而防抖就不会打印
+  function throttle(fn,delay){
+    var valid = true;
+    return function (){
+      if (!valid){
+        return false
+      }
+      valid = false;
+      setTimeout(function (){
+        fn();
+        valid = true;
+      },delay)
+    }
+  }
+
+  window.onscroll = throttle(scrollHandle,2000)
+  function scrollHandle(){
+    var scrollTop = document.documentElement.scrollTop;
+    console.log(scrollTop);
+  }
+
+</script>
+</body>
+</html>

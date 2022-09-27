@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="password">
+<script>
+    var password = document.getElementById("password")
+    password.onkeyup = function (e){
+        //keyCode:代表每个按键的唯一标识
+        console.log(e.keyCode);
+        if (e.keyCode===13){
+            console.log("开始搜索")
+        }
+    }
+</script>
+</body>
+</html>

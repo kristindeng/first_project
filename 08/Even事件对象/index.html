@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">按钮</button>
+<a href="https://itbaizhan.com" id="it">itbaizhan</a>
+<script>
+
+    var btn = document.getElementById("btn")
+    //event事件对象 其实就是参数
+    //Event.target:属性返回事件当前所在的节点（点击谁，就打印出来谁）
+    btn.onclick = function (event){
+        event.target.innerHTML = "点击之后"
+        console.log(event.type);//click
+    }
+
+    //Event.precentDefault方法取消浏览器对当前事件的默认行为
+    //比如：点击连接后，浏览器默认会跳转到另一个页面，使用这个方法后，就不会跳转了
+    var it = document.getElementById("it");
+    it.onclick = function (e){
+        e.preventDefault();
+        console.log("点击了A")
+    }
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

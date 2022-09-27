@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <style>
+    .root{
+      width: 300px;
+      height: 300px;
+      background-color: #999999;
+    }
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="root" id="root">
+  <div class="box" id="box"></div>
+</div>
+<script>
+  //Event.stopPropagation()阻止事件在DOM中继续传播，防止再触发定义在别的节点上的监听函数，
+  // 但不包括在当前节点上其他的事件监听函数
+  //点击红色会同时触发root和box
+    var root = document.getElementById("root")
+    var box = document.getElementById("box")
+    root.onclick = function (){
+        console.log("root")
+  }
+    box.onclick = function (){
+        console.log("box")
+  }
+
+  //需求：点击box时只触发本身,这种叫阻止事件冒泡
+  box.onclick = function (e){
+      e.stopPropagation();
+    console.log("box")
+  }
+</script>
+</body>
+</html>

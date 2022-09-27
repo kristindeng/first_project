@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //js提供定时执行代码的功能，叫做定时器（timer），主要由setTimeout（）和setInterval（）这两个函数来完成。它们向任务队列添加定时任务
+    //setTimeout函数用来指定某个函数或某段代码，在多少毫秒之后执行。它返回一个整数，表示定时器的编号，以后可以用来取消这个定时器
+    //var timerId = setTimeout(func|code,delay)
+    //setTimeout函数接受两个参数，第一个参数func|code是将要推迟执行的函数名或者一段代码，第二个参数delay是推迟执行的毫秒数
+    // setTimeout(function (){
+    //   console.log("大家好，3秒之后执行");
+    // },3000)//3000毫秒
+
+
+    //温馨提示：如果回调函数是对象的方法，那么setTimeout使得方法内部的this关键字指向全局环境，而不是定义时所在的那个对象
+    // var name = "iwen"
+    // var user = {
+    //     name: "itbaizhan",
+    //     getName: function () {
+    //         //this永远指向当前调用者--user
+    //         setTimeout(function (){
+    //             console.log(this.name);
+    //         },1000)
+    //
+    //     }
+    // }
+    // user.getName();//iwen  没有写setTimeout输出打印是（itbaizhan）
+
+    //需求：有setTimeout前提下，仍然输出打印itbaizhan
+    // var name = "iwen"
+    // var user = {
+    //     name: "itbaizhan",
+    //     getName: function () {
+    //         //this永远指向当前调用者--user
+    //         var that = this
+    //         setTimeout(function (){
+    //             console.log(that.name);
+    //         },1000)
+    //
+    //     }
+    // }
+    // user.getName();//itbaizhan
+
+    //取消定时器
+    var timer = setTimeout(function (){
+        console.log("大家好，3秒之后执行");
+    },3000)//3000毫秒
+    clearTimeout(timer)
+</script>
+</body>
+</html>
