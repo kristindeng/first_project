@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //网络请求之间有没有用依赖关系？很多接口可能要依赖上一个接口的数据才能执行
+  function ajax(url){
+    return new promise(function (resolve,reject){
+      $.getJSON(url,function (result) {
+        resolve(result)
+      },function (error){
+        reject(error)
+      })
+    })
+  }
+
+  async function getInfo(){
+    var id = await ajax("接口1");
+    var info = await ajax("接口2" +id[0]);
+    var result = await ajax("接口3" +info.name);
+    console.log(result);
+  }
+  getInfo();
+</script>
+</body>
+</html>

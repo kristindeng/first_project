@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //传统上，js只有indexOf方法，可以用来确定一个字符串是否包含在另一个字符串中。ES6又提供了三种新方法
+  //includes（）返回布尔值，表示是否找到了参数字符串
+  //starstWith（）返回布尔值，表示参数字符串是否在原字符串的头部
+  //endswith（）返回布尔值，表示参数字符串是否在原字符串的尾部
+  // var allstr = "helloworld";
+  // var str = "llo"
+  // console.log(allstr.includes(str));//true
+  // console.log(allstr.startsWith(str));//false
+  // console.log(allstr.endsWith(str));//false
+
+  //这三个方法都支持第二个参数，表示从开始搜索位置开始
+  var allstr1 = "helloworld";
+  var str1 = "llo"
+  console.log(allstr1.includes(str1,6))//false-orld
+
+  //repeat:返回一个新字符串，表示将原字符串重复n次
+  //需求：得到3个XXX
+  var x = "x";
+  console.log(x.repeat(3));
+
+  //padStart(),padEnd():ES2017引入了字符串补全长度的功能。如果某个字符串不够指定长度，会在头部或尾部补全。
+  //padStart()：补全头部  padEnd()：补全尾部
+  var h = "hello";
+  console.log(h.padStart(10,"ab"))//ababahello
+
+  //trimStart() trimEnd():ES2019对字符串实例增加了这两个方法。他们的行为与trim（）一致，
+  //trimStart()消除字符串头部的空格
+  //trimEnd()消除尾部的空格。他们返回的都是新字符串，不会修改原字符串
+  var it = "   itbazhan   ";
+  console.log(it.trim());//前后空格都去掉
+  console.log(it.trimStart());//前空格都去掉
+  console.log(it.trimEnd());//后空格都去掉
+
+  //at()方法接受一个整数作为参数，返回参数指定位置的字符，支持负索引（即倒数的位置）
+  const str = "hello";
+  console.log(str.at(1));//h
+  console.log(str.at(-1));//0
+
+
+
+</script>
+</body>
+</html>

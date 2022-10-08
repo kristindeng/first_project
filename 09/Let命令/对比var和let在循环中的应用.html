@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // var a = [];
+    // for (var i = 0;i < 10;i++){
+    //   a[i] = function (){
+    //     console.log(i);
+    //   };
+    // }
+    // a[6]();//10
+
+    // var a = [];
+    // for (let i = 0;i < 10;i++){
+    //     a[i] = function (){
+    //         console.log(i);//10
+    //     };
+    // }
+    // a[6]();//6
+
+    //let是不存在变量提升的
+    //   console.log(i);//undefined
+    //   var i = 10;
+
+    // console.log(i);
+    // let i = 10;//报错
+
+    // let i = 10;
+    // console.log(i);//10
+
+    //let不允许在相同作用域内，重复声明同一个变量
+    let i = 10;
+    let i = 10;
+    console.log(i)//报错
+
+    function func(){
+        let a = 10;
+        var a = 1;//报错
+    }
+    function func(){
+        let a = 10;
+        let a = 1;//报错
+    }
+
+</script>
+</body>
+</html>

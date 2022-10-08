@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //add()添加方法
+  var s = new Set();
+  s.add("100")
+  console.log(s)
+
+  //delete删除某个值，返回一个布尔值，表示删除是否
+
+  var i = new Set();
+  i.add("100")
+  i.delete("100")
+  console.log(i)
+
+  //has（）：返回一个布尔值，表示该值是否为Set的成员
+  var a = new Set();
+  a.add(200)
+  var flag = a.has(200);
+  console.log(flag);//true
+
+  //clear():清楚所有成员，没有返回值
+  var b = new Set();
+  b.add("100")
+  b.add("200")
+  b.clear();
+  console.log(b)
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>标题1</h3>
+<h3>标题2</h3>
+<h3>标题3</h3>
+<script>
+
+    // Array.form方法用于将类数组转为真正的数组
+    //Array.of（）方法用于将一组值，转换为数组
+    //常见的数组有三类：arguments 元素合集  类似数组的对象
+    //类数组/伪数组，是能使用数组的读取方式和length属性，不能使用数组方法：比如push
+    //arguments:读取函数中的可变参数
+    function add() {
+        console.log(arguments);//读取到10 20 30
+        //用Array.form变成真正的数组
+        var result = Array.from(arguments);
+        result.push(40);
+        console.log(result)
+
+    }
+    add(10, 20, 30)
+
+    //元素集合
+    let titles = document.querySelectorAll("h3")
+    console.log(titles);
+    //用Array.form变成真正的数组
+    console.log(Array.from(titles));
+    console.log(titles[0]);
+    console.log(titles[1]);
+
+    //类似数组的对象
+    var user = {
+        "0": "lan",
+        "1": "20",
+        "2": "女",
+        length: 3
+    }
+    console.log(user[0]);//lan
+    console.log(user.length);//3
+    //用Array.form变成真正的数组
+    console.log(Array.from(user));
+
+    //Array.of（）方法用于将一组值，转换为数组
+    console.log(Array.of(10,20,30));
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //基本用法：ES6提供了新的数据结构Set。它类似于数组，但是成员的值都是唯一的，没有重复的值
+  //Set本身是一个构造函数，用来生成Set数据结构
+  //通过add（)方法向Set结构加入成员，结果表明Set结构不会添加重复的值
+  // var s = new Set();
+  // var arr = [10,20,30,30,40];
+  // arr.forEach(x =>s.add(x));
+  // console.log(s)
+
+  //Set函数可以接受一个数组作为参数
+  // var s = new Set([10,20,30]);
+  // console.log(s);
+
+  //数组去除重复成员的方法
+  var arr = [10,20,10,20,30,40];
+  // var s = new Set(arr);
+  // //Set也可以使用扩展运算符来读取数据
+  // console.log([...s])
+  console.log([...new Set(arr)]);//上两句的综合
+
+  //字符串去除重复字符
+  console.log([...new Set("abcabccdd")].join(""));
+
+  //向Set加入值的时候，不会发生类型转换，所以5和“5”是两个不同的值
+  // var s= new Set();
+  // s.add(5)
+  // s.add("5")
+  // console.log(s)
+
+
+  //size属性;返回Set实例的成员总数
+  var s= new Set();
+  s.add(5)
+  s.add("5")
+  console.log(s.size)
+</script>
+</body>
+</html>

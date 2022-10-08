@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //Babel转码器：可以将ES6转为ES5代码，从而再老版本的浏览器运行。这意味着，你可以用ES6的方式编码，又不用担心现有环境是否支持
+  //浏览器支持性查看：https://caniuse.com/
+  //Babel官网：https://babeljs.io/
+  //第一步：安装Babel：npm install --save-dev @babel/core
+
+  //第二步：Babel的配置文件是.babelrc,存放在项目的根目录下。使用Babel的第一步，就是配置这个文件。该文件用来设置转码规则和插件
+  //第三步：转码规则：npm install --save-dev @babel/preset-env
+  //第四步：将规则加入.babelrc
+
+  //Babel命令行转码：Babel提供命令行工具@Babel/cil,用于命令行转码：npm install --save-dev @babel/cil
+  //把es6Demo.js转成es5Demo.js：npx babel .\es6Demo.js -o es5Demo.js
+  //整个目录转码：npx babel src --out-dir lib或者npx babel src -d lib
+  //都在cmd中运行
+</script>
+</body>
+</html>

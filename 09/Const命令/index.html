@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //总结：常量（const）：声明之后不允许改变
+    //1.const不允许重新赋值
+    // 2.必须声明的时候直接初始化
+    //3.是块级作用域
+    //4.不存在常量提升
+    //5.不能重复声明
+
+    //const声明一个只读的常量。一旦声明，常量的值就不能改变
+    const PI = 3.14;
+    console.log(PI);
+
+    //const一旦声明变量，就必须立即初始化，不能留到以后赋值
+    const name = "lan";//必须声明的时候直接初始化
+
+    //const是块级作用域
+    {
+        const n1 = "n1"
+    }
+    console.log(n1);//块级作用域只能在花括号里使用它，在外面打印就会报错，所以const是块级
+
+    //const命令声明的常量也是不存在提升
+    console.log(name);
+    const name = "lan"//报错
+
+    //const声明的常量，也与let一样不可重复声明
+    const n1 = 10;
+    const n1 = 20;
+</script>
+</body>
+</html>

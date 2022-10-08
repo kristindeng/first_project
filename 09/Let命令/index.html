@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  //Es6新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，旨在let命令行所在代码块内有效
+  //var关键字：函数级的作用域
+  //let关键字：1：let是块级作用域（花括号级的作用）2.let是不存在变量提升的  3.let是不能重复声明的
+
+  if(true){
+    var i = 10;
+  }
+  console.log(i);//10
+
+  if(true){
+    let i = 10;
+  }
+  console.log(i);//报错
+
+  //for循环的计算器，就很合适使用let命令
+  for (let i = 0; i<10; i++){
+    console.log(i);//正常打印
+  }
+  console.log(i);//报错，不在花括号里面
+</script>
+</body>
+</html>

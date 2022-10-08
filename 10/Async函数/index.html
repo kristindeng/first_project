@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  //ES2017标准引入了async函数，使得异步操作变得更加方便
+  //async函数可以将异步操作变为同步操作
+
+  // function print(){
+  //   //定时器异步的
+  //   setTimeout(()=>{
+  //     console.log("定时器");
+  //   },10)
+  //   console.log("hello");
+  // }
+  // print();//先输出hello，后输出定时器
+
+  // Async需求：把上面异步的，变成同步的，先输出定时器，再输出hello
+  function timeout(ms){
+      //resolve:是一个函数
+      const promise = new Promise((resolve)=>{
+          setTimeout(function (){
+              console.log("定时器")
+              resolve();
+          },ms)
+      })
+      return promise
+  }
+
+  async function asyncPrint(ms,value){
+      //把具有异步操作的代码前面放入;await
+      await timeout(ms);
+      console.log(value)
+  }
+  asyncPrint(100,"hello")
+</script>
+</body>
+</html>

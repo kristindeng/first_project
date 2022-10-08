@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //字符串Unicode表示法：ES6加强了Unicode的支持
+  //Unicode含义：统一码也叫万国码、单一码，是计算机科学领域的一项业界标准，包括字符集、编码方案等
+  //他是为解决传统的字符编码方案的局限二产生的，它为每种语言中的每个字符设定了统一并且唯一的二进制编码，
+  // 以满足跨语言、跨平台进行文本转换、处理的要求
+  console.log("\u0061");//a
+  console.log("\u0062");//b
+
+  //字符串的遍历器接口--for..of循环遍历
+  var str = "hello";
+  for (let i of str){
+      console.log(i);//新方法，一个一个单词打印
+  }
+  for (let i = 0;i<str.length;i++){
+      console.log(str[i]);//前面学的方法
+  }
+
+  //模板字符串（template String）-（工作中使用率较高）：是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，
+  //也可以用来定义多行字符串,或者在字符串中嵌入变量
+
+  //需求：动态创建一个A标签，A标签href属性也是动态的
+  var href = "https://itbaizhan.com";
+  var text = "百战"
+  //当我向页面动态写入标签时，标签的数据一般来源于服务器
+  // var itbaizhan = "<a href='"+href +"'>"+text +"</a>";
+  // console.log(itbaizhan);//非常麻烦
+
+  //字符串模板(使用率高）
+  var itbaizhan1 = `<a href="${href}">${text}</a>`
+  console.log(itbaizhan1);
+
+</script>
+</body>
+</html>

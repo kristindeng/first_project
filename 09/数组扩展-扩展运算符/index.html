@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //扩展运算符（spread）是三个点（...)。将一个数组转为用逗号分隔的参数序列
+  var arr = [10,20,30,40];
+  for (let i = 0;i<arr.length;i++){
+      console.log(arr[i]);//这个是以前学的for循环的方法
+  }
+  console.log(...arr);
+
+  //替代函数的apply方法
+  //需求：求数据中的最大值
+  console.log(Math.max.apply(null, arr));//40
+  console.log(Math.max(...arr));//40
+
+  //合并数组
+  var arr1 = [10,20,30,40]
+  var arr2 = [50,60,70,80]
+  console.log(arr1.concat(arr2));//以前方法
+  console.log([...arr1,...arr2]);
+</script>
+</body>
+</html>
