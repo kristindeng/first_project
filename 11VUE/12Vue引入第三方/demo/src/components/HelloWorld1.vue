@@ -24,7 +24,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 export default {
-  name: 'HelloWorld',
+  name: 'HelloWorld1',
   setup() {
     return {
       modules: [Pagination]
