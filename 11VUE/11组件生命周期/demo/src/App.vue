@@ -1,26 +1,18 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <p>{{ message}}</p>
-<MyComponent @onEvent="getDataHandle"/>
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <MyComponent/>
 </template>
 
 <script>
-import MyComponent from "@/components/My component";
+import HelloWorld from './components/HelloWorld.vue'
+import MyComponent from './components/MyComponent.vue'
 
 export default {
   name: 'App',
-  data(){
-    return{
-      message:""
-    }
-  },
   components: {
+    HelloWorld,
     MyComponent
-  },
-  methods:{
-    getDataHandle(data){
-      this.message = data;
-    }
   }
 }
 </script>
